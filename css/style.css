@@ -1,0 +1,755 @@
+:root{
+    --color-barra:#070a4f;
+    --negro:#000000;
+    --eslogan:#0f2244;
+    --blanco:#fff;
+}
+
+/* Reseteo de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Estilos generales */
+html, body {
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+    align-items: center;
+    line-height: 1.3;
+    justify-content: center;
+    min-height: 100vh;
+}
+/* Contenedor global */
+.contenedor {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.contenedor-no {
+    max-width: 120rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+    .contenedor-no {
+        max-width: 120rem;
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+/* Importación de fuentes */
+@font-face {
+    font-family: 'Open Sans';
+    src: url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    font-display: swap;
+}
+
+/* Estilos del encabezado */
+.cabeza {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Estilos de enlaces */
+a, ul {
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Estilos de los títulos */
+h1 {
+    color: white;
+    text-align: center;
+    font-weight: 900;
+    font-size: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+.yt-contenedor h2 {
+    
+    color: var(--eslogan);
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    
+
+}
+.contenedor-cuerpo {
+    padding: 2rem 0;
+}
+/* Estilo de eslogan */
+.contenedor-cuerpo h2 {
+    color: var(--eslogan);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.13rem;
+}
+/* Estilo de eslogan p */
+.eslogan p {
+    padding-top: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.13rem;
+}
+
+.contenido{
+    height: 60rem;
+}
+
+/* Estilos de los spans */
+span {
+    font-size: 60px;
+}
+
+
+/* Estilos de la barra de navegación */
+.barra {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    align-items: center;
+    background-color: var(--color-barra);
+    transition: transform 0.5s ease-in-out;
+    z-index: 1000;
+    justify-content: center;
+    align-content: center;
+    
+    flex-direction: column;
+}
+
+/* Redes sociales barra */
+.social-icons-b{
+    display: flex;
+    gap: 1rem;
+}
+
+/* Estilos del contenedor del slider */
+.contenedor-slider {
+
+    height: 750px;
+    width: 100%;
+    position: relative;
+}
+
+/* Estilos del marco del slider */
+.slider-frame {
+    width: 100%;
+    height: 100%;
+    margin: 5rem auto 0;
+    overflow: hidden;
+}
+
+/* Estilos de la lista de imágenes del slider */
+.slider-frame ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+    transition: margin-left 0.5s ease;
+}
+
+/* Estilos de los elementos de la lista del slider */
+.slider-frame li {
+    width: 100%;
+    list-style: none;
+}
+
+/* Estilos de las imágenes del slider */
+.slider-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Estilos de los controles del slider */
+.controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.prev, .next {
+    background: none;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    padding: 0 2rem;
+    font-size: 4rem;
+    cursor: pointer;
+    outline: none;
+}
+
+.prev:hover, .next:hover {
+    transform: scale(1.1);
+    transition: .3s ease-in-out;
+}
+
+
+
+/* Estilos de los indicadores (círculos) */
+.indicators {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.active {
+    background-color: white;
+}
+
+.yt-contenedor {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.video-thumbnail {
+    width: 100%;
+    cursor: pointer;
+    display: block;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background-image: url('https://img.icons8.com/material-outlined/24/ffffff/play--v1.png'); /* Cambia la URL del ícono si es necesario */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Estilos del footer */
+.footer {
+    background-color: var(--color-barra);
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.footer .contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer .logo {
+    margin-bottom: 1rem;
+}
+
+.footer .logo img {
+    width: 120px; /* Ajusta el tamaño del logo según sea necesario */
+}
+
+.footer p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 0.5rem;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos de los enlaces de redes sociales */
+.footer .social-icons {
+    margin-top: 1rem;
+}
+
+.footer .social-icons a {
+    margin: 0 0.5rem;
+    display: inline-block;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.footer .social-icons a:hover {
+    color: #ccc; /* Cambia el color al pasar el ratón */
+}
+
+
+/* Estilos del formulario de contacto */
+.contact-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--eslogan);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form h1 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-barra);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.submit-btn {
+    background-color: var(--blanco);
+    color: var(--eslogan);
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    color: var(--blanco);
+    background-color: #0056b3; /* Ajusta el color al pasar el ratón si lo deseas */
+}
+/* Formulario para celulares */
+@media (max-width: 480px) {
+    .contact-form {
+        max-width: 90%; /* Ocupa el ancho completo del contenedor */
+        margin: 1rem auto; /* Reduce los márgenes para hacerla más pequeña */
+        padding: 1rem; /* Reduce el padding para hacerla más compacta */
+    }
+
+    .contact-form h1 {
+        font-size: 1.5rem; /* Reduce el tamaño de la fuente del título */
+        margin-bottom: 0.5rem; /* Reduce el espacio inferior */
+    }
+
+    .form-group label {
+        font-size: 0.9rem; /* Reduce el tamaño de la fuente de las etiquetas */
+        margin-bottom: 0.3rem; /* Reduce el espacio entre la etiqueta y el input */
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 0.6rem; /* Reduce el padding dentro de los campos de texto */
+        font-size: 0.9rem; /* Reduce el tamaño de la fuente en los campos de entrada */
+    }
+
+    .submit-btn {
+        padding: 0.6rem 1.2rem; /* Ajusta el padding del botón de envío */
+        font-size: 0.9rem; /* Reduce el tamaño de la fuente del botón */
+    }
+}
+
+
+
+/* Estilos para pantallas más grandes */
+@media (min-width: 768px) {
+    .barra {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 3rem;
+    }
+}
+
+/* Estilos del logotipo */
+.logo {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.logo img {
+    width: 150px;
+}
+
+/* Efectos de los enlaces de la barra de navegación */
+.barra-principal a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    transition: width 0.5s ease;
+}
+
+.barra-principal a:hover::after {
+    width: 100%;
+}
+
+/* Estilos de la barra principal de navegación */
+.barra-principal {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    transition: opacity 4.3s, transform  2s;ease-inout;
+}
+
+.barra-principal.oculto {
+    opacity: 0;
+}
+
+/* Estilos del botón del menú */
+.menu-btn {
+    display: none;
+    position: absolute;
+    top: 1rem;
+    height: 30px;
+    right: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+/* Clase para mostrar elementos ocultos */
+.mostrar {
+    display: block;
+    transition: 1s;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .barra {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .barra-principal {
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden; /* Asegúrate de ocultar el contenido que desborda */
+        max-height: 0; /* Oculta el contenido inicialmente */
+        opacity: 0; /* Hace que el contenido sea transparente inicialmente */
+        transition: max-height 0.5s ease-out, opacity 0.5s ease-out; /* Añade la transición */
+        column-gap: 2rem;
+        padding: 0; /* Ajusta el padding para ocultar el contenido */
+    }
+    
+    .barra-principal.mostrar {
+        max-height: 500px; /* Ajusta esto según el contenido de tu barra */
+        opacity: 1; /* Hace que el contenido sea visible */
+        padding: 1rem; /* Ajusta el padding cuando la barra esté visible */
+    }
+    
+
+
+
+    .menu-btn {
+        display: block;
+    }
+    
+    
+      
+      
+
+    .contenedor-slider {
+        height: 100%;
+        width: 100%;
+    }
+
+    .indicators {
+        bottom: 5px;
+    }
+
+    .prev, .next {
+        font-size: 1.5rem;
+    }
+
+    .dot {
+        height: 8px;
+        width: 8Px;
+    }
+    .yt-contenedor iframe {
+        width: 100%; /* Ajusta el ancho del iframe al contenedor */
+        max-width: 550px; /* Limita el ancho máximo del iframe */
+        height: 350px; /* Mantiene la proporción del video */
+    }
+
+}
+
+/* Estilos adicionales para pantallas muy pequeñas (360px de ancho) */
+@media (max-width: 360px) {
+    .contenedor-slider {
+        height: 220px;
+    }
+
+    .dot {
+        height: 8px; /* Aumenta el tamaño de los indicadores */
+        width: 8px;  /* Aumenta el tamaño de los indicadores */
+        margin: 0 6px; /* Aumenta el margen entre los indicadores */
+    }
+
+    .prev, .next {
+        font-size: 1.5rem; /* Aumenta el tamaño de los controles de navegación */
+    }
+
+    .yt-contenedor{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-content: center;
+        justify-content: center; /* Centra el video horizontalmente */
+        padding: 10px; /* Espacio alrededor del video */
+    }
+
+    .yt-contenedor iframe {
+        
+        width: 100%; /* Ajusta el ancho del iframe al contenedor */
+        height: 200px; /* Mantiene la proporción del video */
+    }
+    /* Eslogan Celular */
+    .contenedor-cuerpo h2 {
+        color: var(--eslogan);
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 1.13rem;
+    }
+    /* Estilo de eslogan p */
+    .eslogan p {
+        padding-top: 1rem;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: .83rem;
+    }
+}
+
+/* Pantalla de carga */
+
+/* Pantalla de carga */
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-barra);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000; /* Asegúrate de que esté por encima de todos los demás elementos */
+}
+
+/* Estilos del logo */
+#loader-logo {
+    width: 150px;
+    animation: scaleAnimation 2s infinite ease-in-out;
+}
+
+/* Animación de escala */
+@keyframes scaleAnimation {
+    0%, 100% {
+        transform: scale(1); /* Escala normal */
+    }
+    50% {
+        transform: scale(1.2); /* Aumenta la escala */
+    }
+}
+
+/* Ocultar pantalla de carga cuando la página ha cargado */
+body.loaded #loader-wrapper {
+    display: none;
+}
+/* Animación del botón del menú */
+@keyframes fadeInMenuBtn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.menu-btn {
+    animation: fadeInMenuBtn 0.5s ease-in-out;
+}
+
+/* Estilos de la sección de noticias */
+.noticias {
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+    background-color: #f4f4f4;
+}
+
+.noticias_txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.noticias h2 {
+    color: var(--eslogan);
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.noticias-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+   
+}
+
+.noticia {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 300px;
+    text-align: center;
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.noticia:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #e0f7fa;
+}
+
+.noticia img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    
+    transition: transform 0.3s ease;
+}
+
+@media (max-width: 480px) {
+    .noticia img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }  
+}
+
+.noticia:hover img {
+    transform: scale(1.05);
+}
+
+.noticia h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.noticia:hover h3 {
+    color: #00796b;
+}
+
+.noticia p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Animación de carga para las noticias */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.noticia {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@media (max-width: 480px) {
+    .noticias-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+
+    }   
+}
+

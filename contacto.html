@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto Universitario Enlace</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!-- Enlace para Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+
+    <!-- Pantalla de carga -->
+    <div id="loader-wrapper">
+        <img src="Logo/Logo_IUE.png" alt="Instituto Universitario Enlace" id="loader-logo">
+    </div>
+    <!-- Fin de pantalla de carga -->
+
+    <!-- Cabeza -->
+    <header class="cabeza">
+        <div class="barra">
+            <div class="logo">
+                <a href="index.html"><img href="#inicio_scroll" class="smooth-scroll" src="Logo/Logo_IUE.png" alt=""></a>
+            </div>
+            <img class="menu-btn" id="menu-btn" src="Img/Menu-w.png" alt="Menú">
+            <nav class="barra-principal" id="barra-principal">
+                <a href="Servicios/servicios.html" class="smooth-scroll">Servicios</a>
+                <a href="Conocenos_Mas/Conocenos.html" class="smooth-scroll">Conócenos Más</a>
+                <a href="Plataforma_educativa/Plataforma.html" class="smooth-scroll">Plataforma Educativa</a>
+                <a href="contacto.html" class="smooth-scroll">Contáctanos</a>
+                <div class="social-icons-b">
+                    <div></div>
+                    <a href="https://www.facebook.com/p/Instituto-Universitario-Enlace-100069745053476/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/15549174404" target="_blank" aria-label="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.youtube.com/@IUE_edu" target="_blank" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+<!-- Cuerpo -->
+<section id="contacto_scroll">
+    <h1>Contáctanos</h1>
+    <form action="enviar_correo.php" method="POST" class="contact-form">
+        <div class="form-group">
+            <label for="nombre">Nombre Completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+
+        <div class="form-group">
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" min="11" max="65" required>
+        </div>        
+
+        <div class="form-group">
+            <label for="telefono">Número Telefónico:</label>
+            <input type="tel" id="tel" name="tel" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="mensaje">Servicio de interés:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Enviar</button>
+    </form>
+</section>
+<!-- Fin del cuerpo -->
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="contenedor">
+        <div class="logo">
+            <img src="Logo/Logo_IUE.png" alt="Instituto Universitario Enlace">
+        </div>
+        <p>&copy; 2024 Instituto Universitario Enlace. Todos los derechos reservados.</p>
+        <p><a href="#contacto_scroll" class="smooth-scroll">Contáctanos</a> | <a href="#privacy_policy" class="smooth-scroll">Política de Privacidad</a></p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/p/Instituto-Universitario-Enlace-100069745053476/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/15549174404" target="_blank" aria-label="whatsapp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.youtube.com/@IUE_edu" target="_blank" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+</footer>
+<!-- Fin de footer -->
+
+<!-- Llamado de scripts -->
+<!-- Llamado de scripts -->
+<script src="JavaScript/nav.js"></script>
+<script>
+    // Pantalla de carga
+
+window.addEventListener('load', function () {
+document.body.classList.add('loaded');
+});
+// Fin de la pantalla de carga
+
+</script>
+</body>
+</html>

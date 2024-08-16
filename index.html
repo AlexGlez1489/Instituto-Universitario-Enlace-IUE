@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto Universitario Enlace</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Pantalla de carga -->
+    <div id="loader-wrapper">
+        <a href="index.html"><img src="Logo/Logo_IUE.png" alt="Instituto Universitario Enlace" id="loader-logo"></a>
+    </div>
+    <!-- Fin de pantalla de carga -->
+
+    <!-- Cabeza -->
+    <header class="cabeza">
+        <div class="barra">
+            <div class="logo">
+                <a href="index.html"><img href="#inicio_scroll" class="smooth-scroll" src="Logo/Logo_IUE.png" alt=""></a>
+            </div>
+            <img class="menu-btn" id="menu-btn" src="Img/Menu-w.png" alt="Menú">
+            <nav class="barra-principal" id="barra-principal">
+                <a href="Servicios/servicios.html" class="smooth-scroll">Servicios</a>
+                <a href="Conocenos_Mas/Conocenos.html" class="smooth-scroll">Conócenos Más</a>
+                <a href="Plataforma_educativa/Plataforma.html" class="smooth-scroll">Plataforma Educativa</a>
+                <a href="contacto.html" class="smooth-scroll">Contáctanos</a>
+                <div class="social-icons-b">
+                    <div></div>
+                    <a href="https://www.facebook.com/p/Instituto-Universitario-Enlace-100069745053476/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/15549174404" target="_blank" aria-label="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.youtube.com/@IUE_edu" target="_blank" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Fin del encabezado Menú -->
+
+    <!-- Inicio de Slider y cuerpo -->
+    <section class="contenedor-slider contenedor">
+        <!-- Contenedor de imágenes -->
+        <div class="slider-frame">
+            <ul id="slider">
+                <li><img src="banners/img1.webp" alt="">Banner 1</li>
+                <li><img src="banners/banner-1.png" alt="">Banner 2</li>
+                <li><img src="banners/banner-2.png" alt="">Banner 3</li>
+                <li><img src="banners/banner-3.png" alt="">Banner 4</li>
+            </ul>
+        </div>
+        <!-- Fin del contenedor de imágenes -->
+
+        <!-- Flechas Anterior y Siguiente -->
+        <div class="controls">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+
+        <!-- Fin de indicador de flechas -->
+         
+        <!-- Indicadores redondos -->
+        <div class="indicators">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    </section>
+    <!-- Fin del cuerpo de slider -->
+
+    <!-- Sección de cuerpo eslogan -->
+    <section class="contenedor-cuerpo contenedor">
+        <div class="eslogan">
+            <h2>El fracaso y el rechazo son sólo el primer escalón hacia el éxito</h2>
+            <p>Jim Valvano</p>
+        </div>
+    </section>
+    <!-- Fin de cuerpo eslogan -->
+
+    <!-- Cuerpo Youtube -->
+    <section class="yt-contenedor">
+        <h2>Instituto Universitario Enlace</h2>
+        <div class="video-wrapper" data-src="https://www.youtube.com/embed/bEM7nKTvY2U">
+            <img class="video-thumbnail" src="https://img.youtube.com/vi/bEM7nKTvY2U/maxresdefault.jpg" alt="Video Thumbnail">
+            <button class="play-button"></button>
+        </div>
+    </section>
+    <!-- Fin de cuerpo Youtube -->
+
+    <!-- Sección de Noticias -->
+    <section class="noticias contenedor-no">
+        <h2>Noticias Recientes</h2>
+        <div class="noticias-container">
+            <article class="noticia">
+                <img src="noticias/noticia1.jpg" alt="Noticia 1">
+                <div class="noticias_txt">
+                    <h3>Dia internacional de la juventud</h3>
+                    <p></p>
+                </div>
+                
+                
+            </article>
+            <article class="noticia">
+                <img src="noticias/noticia2.jpg" alt="Noticia 2">
+                <div class="noticias_txt">
+                    <h3>Control Escolar</h3> 
+                   <p>Bienvenido al Instituto Universitario Enlace, Valeria Miranda.</p>
+                </div>
+                
+                
+            </article>
+            
+            <article class="noticia">
+                <img src="noticias/noticia3.jpg" alt="Noticia 2">
+                
+                <div class="noticias_txt">
+                    <h3>Marketing</h3>   
+                    <p>Bienvenido al Instituto Universitario Enlace,Héctor Eduardo.</p>
+                </div>
+                
+            </article>
+
+            <article class="noticia">
+                
+                
+                <div class="noticias_txt">
+                <img src="noticias/noticia4.jpg" alt="Noticia 2">
+                  <h3>Capital Humano</h3>
+                  <p>Bienvenido al Instituto Universitario Enlace, Rosa Cordero.</p> 
+                </div>
+                
+            </article>
+        </div>
+    </section>
+    <!-- Fin de sección de Noticias -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="contenedor contenedor-footer">
+            <div class="logo">
+                <img src="Logo/Logo_IUE.png" alt="Instituto Universitario Enlace">
+            </div>
+            <p>&copy; 2024 Instituto Universitario Enlace. Todos los derechos reservados.</p>
+            <p><a href="#contacto_scroll" class="smooth-scroll">Contáctanos</a> | <a href="#privacy_policy" class="smooth-scroll">Política de Privacidad</a></p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/p/Instituto-Universitario-Enlace-100069745053476/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://wa.me/15549174404" target="_blank" aria-label="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.youtube.com/@IUE_edu" target="_blank" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!-- Fin de footer -->
+
+    <!-- Llamado de scripts -->
+    <script src="JavaScript/nav.js" defer></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        const videoWrapper = document.querySelector('.video-wrapper');
+        const videoSrc = videoWrapper.getAttribute('data-src');
+    
+        // Función para crear el iframe y reemplazar la vista previa
+        function loadVideo() {
+            const iframe = document.createElement('iframe');
+            iframe.width = "900";
+            iframe.height = "500";
+            iframe.src = `${videoSrc}?autoplay=1`;
+            iframe.frameBorder = "0";
+            iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+            iframe.allowFullscreen = true;
+    
+            videoWrapper.innerHTML = ''; // Elimina la vista previa
+            videoWrapper.appendChild(iframe); // Añade el iframe
+        }
+    
+        // Configura el Intersection Observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    loadVideo();
+                    observer.unobserve(entry.target); // Deja de observar después de cargar
+                }
+            });
+        }, { threshold: 0.1 });
+    
+        observer.observe(videoWrapper);
+    });
+    </script>
+
+</body>
+</html>
